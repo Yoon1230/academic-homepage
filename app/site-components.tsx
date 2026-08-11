@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   contentByLocale,
   profile,
@@ -9,6 +8,10 @@ import {
   type Publication,
   type VersionSlug,
 } from "./profile-data";
+
+function Link({ href, ...props }: React.ComponentProps<"a">) {
+  return <a href={href} {...props} />;
+}
 
 const uiByLocale = {
   en: {
