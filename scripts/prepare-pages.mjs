@@ -16,7 +16,11 @@ async function walk(directory) {
 }
 
 function prefixRootPaths(source) {
-  return source.replace(/(["'(=])\/(?!academic-homepage(?:[\/("'])?)/g, `$1${publicPath}/`);
+  return source
+    .replace(/(href\s*=\s*["'])\/(?!academic-homepage(?:[\/("'])?)/g, `$1${publicPath}/`)
+    .replace(/(src\s*=\s*["'])\/(?!academic-homepage(?:[\/("'])?)/g, `$1${publicPath}/`)
+    .replace(/(["'](?:href|src)["']\s*:\s*["'])\/(?!academic-homepage(?:[\/("'])?)/g, `$1${publicPath}/`)
+    .replace(/url\(\/(?!academic-homepage(?:[\/("'])?)/g, `url(${publicPath}/`);
 }
 
 const htmlFiles = (await walk(outputDir)).filter((path) => path.endsWith(".html"));
