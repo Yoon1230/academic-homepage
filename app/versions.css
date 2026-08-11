@@ -2878,6 +2878,11 @@
     line-height: 1.9;
   }
 
+  .academic-serif[lang="zh-CN"] .about-section > p {
+    font-size: 17px;
+    line-height: 1.9;
+  }
+
   .academic-serif .research-focus-item span {
     font-size: 10px;
   }
@@ -2892,6 +2897,11 @@
   }
 
   .academic-serif .news-section li {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .academic-serif[lang="zh-CN"] .news-section li {
     font-size: 16px;
     line-height: 1.75;
   }
@@ -2922,6 +2932,11 @@
   }
 
   .academic-serif .publication-copy > ul li {
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  .academic-serif[lang="zh-CN"] .publication-copy > ul li {
     font-size: 16px;
     line-height: 1.72;
   }
@@ -2965,7 +2980,17 @@
     line-height: 1.85;
   }
 
+  .academic-serif[lang="zh-CN"] .about-section > p {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+
   .academic-serif .news-section li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .academic-serif[lang="zh-CN"] .news-section li {
     font-size: 15px;
     line-height: 1.7;
   }
@@ -2987,6 +3012,10 @@
   }
 
   .academic-serif .publication-copy > ul li {
+    font-size: 15px;
+  }
+
+  .academic-serif[lang="zh-CN"] .publication-copy > ul li {
     font-size: 15px;
   }
 
