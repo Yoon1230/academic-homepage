@@ -8,6 +8,7 @@ import {
   type Publication,
   type VersionSlug,
 } from "./profile-data";
+import { VisitorCounter } from "./visitor-counter";
 
 function Link({ href, ...props }: React.ComponentProps<"a">) {
   return <a href={href} {...props} />;
@@ -256,7 +257,7 @@ function AcademicHomepage({ variant, current, locale = "en", preview }: { varian
           <section id="news" className="academic-section news-section"><SectionHeading icon="●">{ui.news}</SectionHeading><ul>{content.news.map((item) => <li key={item.date}><time>{item.date}{ui.dateSeparator}</time> {item.text}</li>)}</ul></section>
           <Publications locale={locale} />
           <AcademicRecords locale={locale} />
-          <footer className="academic-footer"><span>{ui.updated}</span><span>© 2026 {profile.name}</span></footer>
+          <footer className="academic-footer"><span>{ui.updated}</span><VisitorCounter locale={locale} /><span>© 2026 {profile.name}</span></footer>
         </main>
       </div>
       {preview && <VersionSwitcher current={current} />}
